@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :signups, only: [:index, :create]
+  resources :contact, only: [:index]
+
+  root to: "cat_gifs#index"
+
+  resources :cat_gifs do 
+    member do 
+      get "upvote"
+      get "downvote"
+    end
+
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

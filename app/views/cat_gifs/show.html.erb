@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cat_gif.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @cat_gif.url %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @cat_gif.score %>
+</p>
+
+<%= link_to 'Edit', edit_cat_gif_path(@cat_gif) %> |
+<%= link_to 'Back', cat_gifs_path %>
